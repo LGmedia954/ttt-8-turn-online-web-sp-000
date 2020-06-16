@@ -52,8 +52,6 @@ def turn(board)
      move(board, index, current_player = "X")
    display_board(board) 
    else turn(board)
-   until input_to_index(user_input) <= 8 && valid_move?(board, index)
-         counter += 1
-   end
-end
+  end
+  
 end
