@@ -52,7 +52,7 @@ def turn(board)
    puts "Please enter 1-9:"
    until input_to_index(user_input) <= 8 && valid_move?(board, index)
          counter += 1
-   else
+   end
    if valid_move?(board, index)
    move(board, index, current_player = "X")
    display_board(board)
