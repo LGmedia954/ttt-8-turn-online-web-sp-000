@@ -48,14 +48,11 @@ def turn(board)
    puts "Please enter 1-9:"
    user_input = gets.strip
    index = input_to_index(user_input)
-   if !valid_move?(board, index)
-   puts "Please enter 1-9:"
+   if valid_move?(board, index)
+     move(board, index, current_player = "X")
+   display_board(board) 
+   else turn(board)
    until input_to_index(user_input) <= 8 && valid_move?(board, index)
          counter += 1
    end
-   if valid_move?(board, index)
-   move(board, index, current_player = "X")
-   display_board(board)
-   end
-end
 end
