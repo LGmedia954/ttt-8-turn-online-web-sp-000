@@ -56,3 +56,4 @@ def turn(board)
          counter += 1
    end
 end
+end
